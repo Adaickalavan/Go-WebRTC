@@ -1,4 +1,4 @@
-module github.com/Adaickalavan/Go-WebRTC/
+module github.com/Adaickalavan/Go-WebRTC
 
 require (
 	github.com/joho/godotenv v1.3.0
