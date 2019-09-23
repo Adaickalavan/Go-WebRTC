@@ -41,11 +41,10 @@ func init() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	// go textGenerator()
 }
 
 func main() {
-	// Everything below is the pion-WebRTC API, thanks for using it ❤️.
+	// We use the pion-WebRTC API️.
 	// Create a MediaEngine object to configure the supported codec
 	m := webrtc.MediaEngine{}
 

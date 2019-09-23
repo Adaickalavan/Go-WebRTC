@@ -3,7 +3,6 @@ version: '3'
 services:
   gowebrtc:
     image: gowebrtc
-    # build: .
     container_name: gowebrtc 
     restart: always 
     ports:

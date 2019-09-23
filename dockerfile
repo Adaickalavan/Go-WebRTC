@@ -10,7 +10,8 @@ LABEL Author Adaickalavan Meiyappan
 WORKDIR /src
 
 # Fetch dependencies first; they are less susceptible to change on every build
-# and will therefore be cached for speeding up the next build
+# and will therefore be cached for speeding up the next build.
+# Automatically install Go dependencies
 COPY ./go.mod ./go.sum ./
 RUN go mod download
 
