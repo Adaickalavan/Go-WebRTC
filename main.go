@@ -246,7 +246,7 @@ func addOnDataChannel(pc *webrtc.PeerConnection) {
 					Width:  width,
 				}
 
-				//Prepare message to be sent to Kafka
+				//Prepare message to be sent
 				msgBytes, err := json.Marshal(msgSent)
 				if err != nil {
 					log.Println("Json marshalling error. Error:", err.Error())
@@ -255,10 +255,6 @@ func addOnDataChannel(pc *webrtc.PeerConnection) {
 
 				sendErr := d.Send(msgBytes)
 				if sendErr != nil {
-					// ee := rtcerr.InvalidStateError{Err: webrtc.ErrDataChannelNotOpen}
-					// if sendErr == ee {
-					// 	d.Close()
-					// }
 					log.Println(sendErr)
 					d.Close()
 				}
